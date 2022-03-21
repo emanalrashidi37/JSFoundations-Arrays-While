@@ -9,9 +9,14 @@
  * isArrayLengthOdd([1, 2, 3, 4]) -> flase
  */
 function isArrayLengthOdd(numbers) {
-  return numbers.lenght % 2 === 1;
+  if (numbers.lenght % 2 === 1) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
+isArrayLengthOdd([1, 2, 3]);
 
 /**
  * isArrayLengthEven(numbers):
@@ -24,8 +29,19 @@ function isArrayLengthOdd(numbers) {
  * isArrayLengthEven([1, 2, 3, 4]) -> true
  */
 function isArrayLengthEven(numbers) {
-  return numbers.lenght % 2 === 0;
+  if (numbers.lenght % 2 === 0) {
+    return true;
+  } else {
+    return false;
+  }
 }
+
+/*another way solution:
+function isArrayLengthEven(numbers) {
+  return numbers.lenght % 2 === 0;
+}*/
+
+isArrayLengthEven([1, 2, 3]);
 
 /**
  * addLailaToArray(instructors):
@@ -40,6 +56,8 @@ function addLailaToArray(instructors) {
   return instructors;
 }
 
+addLailaToArray(["Mshary", "Hasan"]);
+
 /**
  * eliminateTeam(teams):
  * - receives array `teams`
@@ -48,10 +66,11 @@ function addLailaToArray(instructors) {
  * e.g.
  * eliminateTeam(["Brazil", "Germany", "Italy"]) -> "Italy"
  */
-function eliminateTeam(teams) {
-  let teams = ["Brazil", "Germany", "Italy"];
-  return teams.pop();
+function eliminateTeam(teamss) {
+  return teamss.pop();
 }
+
+eliminateTeam(["Brazil", "Germany", "Italy"]);
 
 /**
  * secondHalfOfArrayIfItIsEven(fruits):
@@ -64,14 +83,12 @@ function eliminateTeam(teams) {
  * secondHalfOfArrayIfItIsEven(["apple", "orange", "banana", "kiwi", "blueberry"]) -> []
  */
 function secondHalfOfArrayIfItIsEven(fruits) {
-  if (isArrayLengthOdd(fruits)){
-    return [];
-  }
-  else{
-    return fruits.slice(fruits.lenght/2)
-  }
-
+  if (isArrayLengthOdd(fruits)) {
+    return fruits.slice(fruits.lenght / 2);
+  } else return [];
 }
+
+secondHalfOfArrayIfItIsEven(["apple", "orange", "banana", "kiwi"]);
 
 /**
  * youGottaCalmDown(shout):
@@ -89,7 +106,7 @@ function secondHalfOfArrayIfItIsEven(fruits) {
  */
 function youGottaCalmDown(shout) {
   // Your code here
-  return shout.slice(0, shout.indexOf("!") + 1 );
+  return shout.slice(0, shout.indexOf("!") + 1);
 }
 
 module.exports = {
