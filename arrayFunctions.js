@@ -9,7 +9,7 @@
  * isArrayLengthOdd([1, 2, 3, 4]) -> flase
  */
 function isArrayLengthOdd(numbers) {
-  if (numbers.lenght % 2 === 1) {
+  if (numbers.length % 2 === 1) {
     return true;
   } else {
     return false;
@@ -29,7 +29,7 @@ isArrayLengthOdd([1, 2, 3]);
  * isArrayLengthEven([1, 2, 3, 4]) -> true
  */
 function isArrayLengthEven(numbers) {
-  if (numbers.lenght % 2 === 0) {
+  if (numbers.length % 2 === 0) {
     return true;
   } else {
     return false;
@@ -83,8 +83,8 @@ eliminateTeam(["Brazil", "Germany", "Italy"]);
  * secondHalfOfArrayIfItIsEven(["apple", "orange", "banana", "kiwi", "blueberry"]) -> []
  */
 function secondHalfOfArrayIfItIsEven(fruits) {
-  if (isArrayLengthOdd(fruits)) {
-    return fruits.slice(fruits.lenght / 2);
+  if (isArrayLengthEven(fruits)) {
+    return fruits.slice(fruits.length / 2);
   } else return [];
 }
 
